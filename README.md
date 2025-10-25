@@ -13,7 +13,7 @@ Automated UI and API test suite for the TMDB Discover demo site.
 ## ⚙️ Setup
 
 ```bash
-git clone https://github.com/<yourusername>/rr-qaautomation-assignment.git
+git clone https://github.com/meghanams002/rr-qaautomation-assignment.git
 cd rr-qaautomation-assignment
 pip install -r requirements.txt
 
