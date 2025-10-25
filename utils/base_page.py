@@ -1,5 +1,4 @@
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 class BasePage:
@@ -8,9 +7,15 @@ class BasePage:
         self.wait = WebDriverWait(driver, 10)
 
     def click(self, locator):
-        self.wait.until(EC.element_to_be_clickable(locator)).click()
+        element = self.wait.until(EC.element_to_be_clickable(locator))
+        element.click()
+
+    def get_elements(self, locator):
+        return self.driver.find_elements(*locator)
 
     def get_texts(self, locator):
-        self.wait.until(EC.presence_of_all_elements_located(locator))
-        return [el.text for el in self.driver.find_elements(*locator)]
+        elements = self.get_elements(locator)
+        return [e.text for e in elements]
 
+    def wait_for_visible(self, locator):
+        return self.wait.until(EC.visibility_of_element_located(locator))
