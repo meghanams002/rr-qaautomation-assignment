@@ -1,7 +1,8 @@
-| ID    | Test Name           | Steps                      | Expected Result           |
-| ----- | ------------------- | -------------------------- | ------------------------- |
-| TC001 | Verify Genre Filter | Select “Action” from Genre | Action movies displayed   |
-| TC002 | Pagination          | Click Next page            | New results load          |
-| TC003 | Invalid Slug        | Access `/popular` URL      | Page fails gracefully     |
-| TC004 | API Popular Movies  | GET `/movie/popular`       | Response 200 with results |
+# Test Cases
 
+| ID | Area | Description | Steps | Expected |
+|----|------|--------------|--------|-----------|
+| TC01 | UI | Verify "Popular" filter | Click Popular tab | Titles visible |
+| TC02 | UI | Pagination works | Click Next Page | New titles load |
+| TC03 | API | Trending API reachable | Call API | Status 200 |
+| TC04 | API | Trending API has results | Parse JSON | results[] > 0 |
