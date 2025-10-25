@@ -1,8 +1,12 @@
 # Test Cases
 
-| ID | Area | Description | Steps | Expected |
-|----|------|--------------|--------|-----------|
-| TC01 | UI | Verify "Popular" filter | Click Popular tab | Titles visible |
-| TC02 | UI | Pagination works | Click Next Page | New titles load |
-| TC03 | API | Trending API reachable | Call API | Status 200 |
-| TC04 | API | Trending API has results | Parse JSON | results[] > 0 |
+| ID | Feature | Description | Expected |
+|----|----------|--------------|-----------|
+| TC01 | Category Filter | Verify Popular, Trending, Newest, Top Rated load | Titles visible |
+| TC02 | Title Filter | Search by partial text | Matching results |
+| TC03 | Type Filter | Select Movies or TV Shows | Filtered correctly |
+| TC04 | Year Filter | Select specific year | Filtered correctly |
+| TC05 | Rating Filter | Filter ≥8 rating | Only high-rated titles |
+| TC06 | Genre Filter | Select Action | Genre-specific titles |
+| TC07 | Pagination | Click next page | New set of titles |
+| TC08 | API | Trending API returns 200 | Valid JSON |
