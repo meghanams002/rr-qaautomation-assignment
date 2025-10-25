@@ -1,3 +1,2 @@
 BASE_URL = "https://tmdb-discover.surge.sh/"
-API_URL = "https://api.themoviedb.org/3"
-
+TRENDING_API = "https://api.themoviedb.org/3/trending/all/day"
