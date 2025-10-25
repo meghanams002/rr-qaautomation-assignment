@@ -1,24 +1,29 @@
-# Test Plan
+# Test Plan – TMDB Discover Automation
 
-## Objective
-Validate filtering, pagination, and movie listing functionalities of https://tmdb-discover.surge.sh/ using UI and API tests.
+## 🎯 Objective
+Validate TMDB Discover web app UI and API features using Python Selenium and Pytest.
 
-## Scope
-- Categories: Popular, Trending, Newest, Top Rated
-- Filters: Type, Year, Rating, Genre
-- Pagination
-- API validation for movie endpoints
+### Scope
+- UI Testing (Filters, Pagination)
+- API Testing (Trending endpoint)
+- Negative Scenarios (broken slugs, empty lists)
 
-## Out of Scope
+### Out of Scope
 - Authentication
-- Actual TMDB API data validation
+- Database Testing
+
+---
 
 ## Test Levels
-- UI Functional Tests (Selenium + Pytest)
-- API Tests (Requests)
-- Negative Tests (invalid slugs, pagination edge cases)
+- Smoke Testing
+- Functional Testing
+- Negative Testing
 
-## Reporting
-- HTML reports (pytest-html)
-- Log files (logs/test.log)
+---
 
+## Tools
+- Python 3.11
+- Selenium WebDriver
+- Pytest
+- Requests
+- pytest-html
